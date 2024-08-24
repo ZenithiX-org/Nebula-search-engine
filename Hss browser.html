@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula Browser</title>
+    <style>
+        /* Resetting some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #2E3192 0%, #1BFFFF 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Container for the search engine */
+        #search-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Branding for Nebula Browser */
+        #nebula-logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        #tagline {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #B2FFFF;
+        }
+
+        /* Search input styling */
+        #search-input {
+            width: 300px;
+            padding: 15px;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: #333;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Search button styling */
+        #search-button {
+            padding: 15px 25px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 50px;
+            background-color: #00C9FF;
+            background-image: linear-gradient(135deg, #00C9FF 10%, #92FE9D 100%);
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease-in-out;
+        }
+
+        #search-button:hover {
+            background-image: linear-gradient(135deg, #92FE9D 10%, #00C9FF 100%);
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            #search-input {
+                width: 200px;
+            }
+
+            #search-button {
+                padding: 10px 20px;
+            }
+
+            #nebula-logo {
+                font-size: 2em;
+            }
+
+            #tagline {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="search-container">
+        <div id="nebula-logo">Nebula Browser</div>
+        <div id="tagline">The Private and Secure Browser</div>
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" id="search-input" placeholder="Search the web..." required />
+            <button type="submit" id="search-button">Search</button>
+        </form>
+    </div>
+</body>
+</html>
